@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Kilojoule Counter</string>
+    <string name="new_diary_entry">New Diary Entry</string>
+    <string name="calcTitle">Net Kilojoule Calculator</string>
+    <string name="meals">Meals</string>
+    <string name="Breakfast">Breakfast</string>
+    <string name="breakfast">Breakfast:</string>
+    <string name="Dinner">Dinner:</string>
+    <string name="Snacks">Snacks</string>
+    <string name="zero">0</string>
+    <string name="Exercise">Exercise</string>
+    <string name="Gym">Gym:</string>
+    <string name="Sport">Sport:</string>
+    <string name="jogging">Jogging:</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="previous_entry">Previous</string>
+    <string name="next">Next</string>
+    <string name="goToCalc">go_to_calc</string>
+    <string name="go_to_calc1">Calculator</string>
+    <string name="home">Home</string>
+    <string name="average_NKI">"Average Daily NKI:  "</string>
+    <string name="exercise_subtotal"><u>Exercise Subtotal:</u></string>
+    <string name="food_subtotal"><u>Food Subtotal:</u></string>
+    <string name="lunch">Lunch:</string>
+    <string name="netTotal"><u><b>Nett Total Kilojouls:</b></u></string>
+    <string name="date">"Date:  "</string>
+</resources>

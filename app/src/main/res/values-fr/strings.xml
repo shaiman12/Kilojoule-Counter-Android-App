@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Compteur Kilojoule</string>
+    <string name="calcTitle">Calculateur net de kilojoules</string>
+    <string name="meals">Repas</string>
+    <string name="Breakfast">Petit déjeuner:</string>
+    <string name="breakfast">Petit déjeuner:</string>
+    <string name="lunch">Le déjeuner:</string>
+    <string name="Dinner">Dîner:</string>
+    <string name="Snacks">Des collations</string>
+    <string name="zero">0</string>
+    <string name="food_subtotal"><u>Sous-total de nourriture:</u></string>
+    <string name="Exercise">Exercice</string>
+    <string name="Gym">Gym</string>
+    <string name="Sport">Sport:</string>
+    <string name="jogging">Le jogging:</string>
+    <string name="exercise_subtotal"><u>Total partiel de l\'exercice:</u></string>
+    <string name="netTotal"><u><b>Total Kilojouls net:</b></u></string>
+    <string name="save">Sauvegarder</string>
+    <string name="cancel">Annuler</string>
+    <string name="previous_entry">Précédente</string>
+    <string name="next">Prochaine</string>
+    <string name="goToCalc">go_to_calc</string>
+    <string name="go_to_calc1">Calculatrice</string>
+    <string name="home">Accueil</string>
+    <string name="average_NKI">NKI Quotidien Moyen  :</string>
+    <string name="new_diary_entry">Nouvelle entrée de journal</string>
+    <string name="date">"Rendez-vous amoureux:  "</string>
+</resources>

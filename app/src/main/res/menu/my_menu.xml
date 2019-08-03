@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/calculatorMenuItem"
+        android:title="Go to Calculator"
+        app:showAsAction = "never"
+        />
+
+    <item
+        android:id="@+id/goHomeMenuItem"
+        android:title="Go to Overview"
+        app:showAsAction = "never"
+        />
+
+</menu>

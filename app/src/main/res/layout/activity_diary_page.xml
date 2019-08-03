@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiaryPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical">
+            <include
+                android:id="@+id/toolbar"
+
+                layout="@layout/toolbar"/>
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonPrev"
+                        android:layout_width="wrap_content"
+                        android:layout_height="91dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorAccent"
+                        android:onClick="goToPrev"
+                        android:text="@string/previous_entry" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/buttonNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="91dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorAccent"
+                        android:onClick="goToNext"
+                        android:text="@string/next" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonReturn"
+                        android:layout_width="86dp"
+                        android:layout_height="91dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorAccent"
+                        android:onClick="returnToCalc"
+                        android:text="@string/go_to_calc1" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/buttonHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="91dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorAccent"
+                        android:onClick="goHome"
+                        android:text="@string/home" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
