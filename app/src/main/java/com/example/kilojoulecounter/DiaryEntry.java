@@ -125,18 +125,19 @@ public class DiaryEntry {
 
 
 public String toString(){
-        return "Date:  " +dateToday+"\n\n" +
-                "Breakfast:  " + breakfast +
-                "\nLunch:  " + lunch +
-                "\nDinner:  " + dinner +
-                "\nSnacks:  " + snacks+
-                "\nTotal Food Kilojoules:  "+foodTotal+
-                "\n\nGym:  " +gym +
-                "\nSports: " +sports+
-                "\nJogging:  " +jogging+
+        return App.getContext().getResources().getString(R.string.date) +dateToday+"\n\n" +
+                App.getContext().getResources().getString(R.string.breakfastEntry)+ breakfast +
+                "\n"+ App.getContext().getResources().getString(R.string.lunch) + lunch +
+                "\n"+App.getContext().getResources().getString(R.string.Dinner) + dinner +
+                "\n"+App.getContext().getResources().getString(R.string.snacksEntry) + snacks+
+                "\n"+App.getContext().getResources().getString(R.string.food_subtotal)+foodTotal+
+                "\n\n"+App.getContext().getResources().getString(R.string.Gym) +gym +
+                "\n"+App.getContext().getResources().getString(R.string.Sport) +sports+
+                "\n"+App.getContext().getResources().getString(R.string.jogging) +jogging+
 
 
-                "\nExercise Kilojoules:  "+exTotal+"\n\nNett Kilojoule Intake:  "+netTotal;
+                "\n"+App.getContext().getResources().getString(R.string.exercise_subtotal)+exTotal+
+                "\n\n"+App.getContext().getResources().getString(R.string.netTotal)+netTotal;
 }
 
 

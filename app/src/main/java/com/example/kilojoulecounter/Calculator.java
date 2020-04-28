@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.Editable;
@@ -32,7 +33,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Calculator extends AppCompatActivity {
-    public String dateToday;
+    public String dateToday="";
     public int breakfast = 0;
     public int lunch = 0;
     public int dinner = 0;
@@ -42,7 +43,7 @@ public class Calculator extends AppCompatActivity {
     public int sports = 0;
     public int jogging = 0;
     public int exTotal = 0;
-    public int netTotal;
+    public int netTotal =0;
     public EditText breakView;
     public EditText  lunchView;
     public EditText  dinnerView;
@@ -69,7 +70,6 @@ public class Calculator extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Drawable drawable = ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_icon);
         toolbar.setOverflowIcon(drawable);
-
         setDate();
         breakView = (EditText )findViewById(R.id.breakfastInput);
         lunchView = (EditText )findViewById(R.id.lunchInput);
@@ -83,6 +83,7 @@ public class Calculator extends AppCompatActivity {
         netText = (TextView) findViewById(R.id.netTotal);
         buttonSave = (Button) findViewById(R.id.saveButton);
         loadData();
+        updateFields();
 
 
         breakView.addTextChangedListener(new TextWatcher() {
@@ -224,9 +225,9 @@ public class Calculator extends AppCompatActivity {
         foodTotal = breakfast+lunch+dinner+snacks;
         exTotal = gym+sports+jogging;
         netTotal = foodTotal-exTotal;
-        foodText.setText("Food Subtotal:  "+foodTotal);
-        gymText.setText("Exercise Subtotal:  "+exTotal);
-        netText.setText("Nett Total Kilojouls:  "+netTotal);
+        foodText.setText(App.getContext().getResources().getString(R.string.food_subtotal)+foodTotal);
+        gymText.setText(App.getContext().getResources().getString(R.string.exercise_subtotal)+exTotal);
+        netText.setText(App.getContext().getResources().getString(R.string.nki)+netTotal);
     }
 
     public void setDate(){
@@ -307,4 +308,49 @@ public class Calculator extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("date",dateToday);
+        outState.putInt("breakfast",breakfast);
+        outState.putInt("lunch",lunch);
+        outState.putInt("dinner",dinner);
+        outState.putInt("snacks",snacks);
+        outState.putInt("foodTotal",foodTotal);
+        outState.putInt("gym",gym);
+        outState.putInt("sports",sports);
+        outState.putInt("jogging",jogging);
+        outState.putInt("exTotal",exTotal);
+        outState.putInt("netTotal",netTotal);
+
+    }
+
+
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        dateToday= savedInstanceState.getString("date");
+        breakfast = savedInstanceState.getInt("breakfast");
+        breakView.setText(String.valueOf(breakfast));
+        lunch = savedInstanceState.getInt("lunch");
+        lunchView.setText(String.valueOf(lunch));
+        dinner = savedInstanceState.getInt("dinner");
+        dinnerView.setText(String.valueOf(dinner));
+        snacks = savedInstanceState.getInt("snacks");
+        snacksView.setText(String.valueOf(snacks));
+        foodTotal = savedInstanceState.getInt("foodTotal");
+
+        gym = savedInstanceState.getInt("gym");
+        gymView.setText(String.valueOf(gym));
+        sports = savedInstanceState.getInt("sports");
+        sportsView.setText(String.valueOf(sports));
+        jogging = savedInstanceState.getInt("jogging");
+        joggingView.setText(String.valueOf(jogging));
+        exTotal = savedInstanceState.getInt("exTotal");
+
+        netTotal = savedInstanceState.getInt("netTotal");
+        updateFields();
+    }
 }
